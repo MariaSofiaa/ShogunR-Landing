@@ -16,33 +16,33 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent {
   title = 'landingShogunReturn';
 
-  private isScrolling = false; // Para evitar scrolls dobles
+  // private isScrolling = false; // Para evitar scrolls dobles
 
-  @HostListener('wheel', ['$event'])
-  onScroll(event: WheelEvent) {
-    if (this.isScrolling) return; 
-    this.isScrolling = true;
+  // @HostListener('wheel', ['$event'])
+  // onScroll(event: WheelEvent) {
+  //   if (this.isScrolling) return; 
+  //   this.isScrolling = true;
 
-    event.preventDefault(); 
-    const sections = document.querySelectorAll('.container > *');
-    const scrollContainer = document.querySelector('.container') as HTMLElement;
+  //   event.preventDefault(); 
+  //   const sections = document.querySelectorAll('.container > *');
+  //   const scrollContainer = document.querySelector('.container') as HTMLElement;
 
-    let currentIndex = Math.round(
-      scrollContainer.scrollTop / window.innerHeight
-    );
+  //   let currentIndex = Math.round(
+  //     scrollContainer.scrollTop / window.innerHeight
+  //   );
 
-    if (event.deltaY > 0 && currentIndex < sections.length - 1) {
-      scrollContainer.scrollTo({
-        top: (currentIndex + 1) * window.innerHeight,
-        behavior: 'smooth',
-      });
-    } else if (event.deltaY < 0 && currentIndex > 0) {
-      scrollContainer.scrollTo({
-        top: (currentIndex - 1) * window.innerHeight,
-        behavior: 'smooth',
-      });
-    }
+  //   if (event.deltaY > 0 && currentIndex < sections.length - 1) {
+  //     scrollContainer.scrollTo({
+  //       top: (currentIndex + 1) * window.innerHeight,
+  //       behavior: 'smooth',
+  //     });
+  //   } else if (event.deltaY < 0 && currentIndex > 0) {
+  //     scrollContainer.scrollTo({
+  //       top: (currentIndex - 1) * window.innerHeight,
+  //       behavior: 'smooth',
+  //     });
+  //   }
 
-    setTimeout(() => (this.isScrolling = false), 800); 
-  }
+  //   setTimeout(() => (this.isScrolling = false), 800); 
+  // }
 }

@@ -1,18 +1,49 @@
 .section-one {
+  position: relative;
   color: white;
-  height: 100vh; /* Ocupa toda la pantalla */
+  min-height: 100vh;
+  overflow: hidden;
+  height: 100vh;   /* Ocupa toda la pantalla */
   width: 100%;
   background-color: #000000; /* Azul */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .contenido {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 600px; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+
+    pointer-events: none; 
+  }
+
+  &::before {
+    left: 0;
+    background-image: url('../../assets/imagenes/castillo.png');
+  }
+
+  &::after {
+    right: 0;
+    background-image: url('../../assets/imagenes/katanas2.png');
+  }
+
 }
 
-/* .txtCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .btnMain {
   background-color: #9F2B2C;
@@ -39,3 +70,4 @@
   font-family: OrchideeLight;
   font-size: clamp(0.6875rem, 0.6518rem + 0.1786vw, 0.9375rem);
 }
+ 
