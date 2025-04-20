@@ -1,0 +1,41 @@
+.section-one {
+  color: white;
+  height: 100vh; /* Ocupa toda la pantalla */
+  width: 100%;
+  background-color: #000000; /* Azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .txtCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.btnMain {
+  background-color: #9F2B2C;
+  font-family: OrchideeLight;
+  border-radius: 8px;
+  width: 60%;
+  height: 5vh;
+  cursor: pointer;
+  border: 1px solid #9F2B2C;
+  color: white;
+  font-size: 18px;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.tituloPrincipal {
+  font-family: OrchideeMedium;
+  font-size: clamp(1.5625rem, 1.4286rem + 0.6696vw, 2.5rem);
+}
+
+.subTitulos {
+  font-family: OrchideeLight;
+  font-size: clamp(0.6875rem, 0.6518rem + 0.1786vw, 0.9375rem);
+}

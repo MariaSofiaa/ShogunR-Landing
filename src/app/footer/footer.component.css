@@ -1,0 +1,8 @@
+.footer {
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative; /* Para que quede al final de la sección */
+  }

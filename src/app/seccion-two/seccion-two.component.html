@@ -1,0 +1,24 @@
+<div class="section section-two">
+  <!-- <h1>Sección 2</h1> -->
+
+  <div class="carousel-container">
+    <!-- Flecha anterior -->
+    <button (click)="prevSlide()" class="prev-btn">←</button>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-wrapper">
+      <div *ngFor="let item of visibleItems; let i = index"
+        class="carousel-slide"
+        [ngClass]="{ 
+             'active': i === centerIndex,
+             'left': i < centerIndex,
+             'right': i > centerIndex
+           }">
+        <img [src]="item" alt="Imagen de perrito">
+      </div>
+    </div>
+
+    <!-- Flecha siguiente -->
+    <button (click)="nextSlide()" class="next-btn">→</button>
+  </div>
+</div>

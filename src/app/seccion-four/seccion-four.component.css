@@ -1,0 +1,11 @@
+.seccion-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Para que abarque toda la pantalla */
+  height: 100vh;
+  width: 100%;
+  background-color: #ff6464;
+  padding: 20px;
+  
+}

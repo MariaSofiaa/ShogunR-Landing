@@ -1,0 +1,9 @@
+@font-face {
+    font-family: OrchideeLight ;
+    src: url(assets/fonts/OrchideeLight.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: OrchideeMedium ;
+    src: url(assets/fonts/OrchideeMedium.ttf) format("truetype");
+}

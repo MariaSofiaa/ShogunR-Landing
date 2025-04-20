@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* Asegura que la página haga scroll por secciones */
+html, body {
+    height: 100%; /* Necesario para el comportamiento del scroll */
+    margin: 0;
+    overflow: hidden; /* Desactiva el scroll global */
+  }
+  
+  /* Contenedor principal que permitirá el scroll */
+  .main-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Hace que el scroll se ajuste de una sección a otra */
+    scroll-behavior: smooth; /* Transición suave entre secciones */
+  }
+  
+  /* Cada sección ocupa toda la pantalla */
+  section {
+    height: 100vh; /* Cada sección ocupa toda la pantalla */
+    scroll-snap-align: start; /* Asegura que cada sección se ajuste en el inicio de la vista */
+    width: 100%;
+    
+  }
+  
+  /* Estilo opcional para cada sección */
+  section:nth-child(odd) {
+    background-color: #f0f0f0; /* Color de fondo alternativo */
+  }
+  
+  section:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  
